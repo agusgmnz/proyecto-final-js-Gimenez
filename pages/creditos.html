@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="../styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <title>Prestamos personales</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg .text-info-emphasis">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">Inicio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="../pages/creditos.html"
+                >presupuestar credito</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/requisitos.html">Requisitos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/benficios.html">Beneficios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/formulario.html">Formulario</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </nav>
+    <main>
+      <h1 class="titulo-cred">Presupuesta tu credito aqui</h1>
+      <p class="parrafo-cred">
+        Si necesitas mas informacion porfavor vaya a la pagina de formulario y
+        deje sus datos ahi
+      </p>
+
+      <form id="simulatorForm">                 
+                 
+        <label for="amount">Monto:</label>          
+                          
+        <input type="text" id="amount">
+            <br>          
+                          
+        <label for="interestRate">Tasa de Interés:</label>
+        <input type="text" id="interestRate">
+            <br>
+        <label for="months">Meses:</label>        
+        <input type="text" id="months">        
+        <br>       
+        <button type="submit">Calcular</button>      
+        </form>       
+        <div id="resultContainer" style="display: none;">        
+        <h2>Resultado</h2>         
+        <p id="result"></p>
+          </div>        
+                            
+        <h2>Préstamos guardados:</h2>             
+        <ul id="loanList"></ul>             
+        <button id="clearButton">Borrar resultados</button>
+
+
+    </main>
+    <footer>      
+      <div class="footer">
+        <ul>
+          <li class="animate__animated animate__fadeInLeft redes"><a href="https://www.facebook.com/agustin.gimenez.79069/"><img src="../img/icons8-facebook-nuevo-64.png" alt="icon-facebook"></a></li>
+          <li class="animate__animated animate__fadeInLeft redes"><a href="https://github.com/agusgmnz"><img src="../img/icons8-github-64.png" alt="icon-github"></a></li>
+          <li class="animate__animated animate__fadeInLeft redes"><a href="https://www.instagram.com/agus.gz_/"><img src="../img/icons8-instagram-64.png" alt="icon-instagram"></a></li>
+          <li class="animate__animated animate__fadeInLeft redes"><a href="https://twitter.com/Agusgmnz_"><img src="../img/icons8-twitter-64.png" alt="icon-twitter"></a></li>
+        </ul>
+        <P class="parrafo-ft">Derechos de autor: Agustin Gimenez. Estudiante de coderhouse en la carrera de desarrollo web full stack</P>
+      </p>
+      </div>
+          </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/main-creditos.js"></script>
+  </body>
+</html>
