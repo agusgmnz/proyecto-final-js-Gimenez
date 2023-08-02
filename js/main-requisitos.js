@@ -23,12 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function verifyAge(age) {
         return new Promise((resolve, reject) => {
-            // Simulamos una verificación de edad
+            // Simulacion una verificación de edad
             setTimeout(() => {
                 if (age >= 18) {
-                    resolve(true); // Si es mayor de 18 años, resolvemos con true
+                    resolve(true); 
                 } else {
-                    resolve(false); // Si es menor de 18 años, resolvemos con false
+                    resolve(false); 
                 }
             }, 1000); // Simulamos una espera de 1 segundo
         });
