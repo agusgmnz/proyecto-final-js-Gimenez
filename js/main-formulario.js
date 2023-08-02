@@ -2,11 +2,12 @@ document.addEventListener("DOMContentLoaded", async function () {
   const contactForm = document.getElementById("contactForm");
   const messageList = document.getElementById("messageList");
   const clearMessagesBtn = document.getElementById("clearMessages");
+  const userDataSection = document.getElementById("userData");
 
   // Cargar el archivo JSON utilizando fetch en una función asincrónica
   async function fetchUsers() {
     try {
-      const response = await fetch("users.json");
+      const response = await fetch("../users.json");
       const data = await response.json();
       return data.users; // Retorna el array de usuarios
     } catch (error) {
@@ -35,11 +36,13 @@ document.addEventListener("DOMContentLoaded", async function () {
     localStorage.setItem("messages", JSON.stringify(savedMessages));
 
     displayMessages();
+    displayUserData(formData);
   });
 
   clearMessagesBtn.addEventListener("click", function () {
     localStorage.removeItem("messages");
     messageList.innerHTML = "";
+    userDataSection.innerHTML = "";
   });
 
   async function displayMessages() {
@@ -63,6 +66,15 @@ document.addEventListener("DOMContentLoaded", async function () {
         messageList.appendChild(listItem);
       }
     });
+  }
+
+  function displayUserData(userData) {
+    userDataSection.innerHTML = `
+        <h2>Tus Datos Ingresados:</h2>
+        <p><strong>Nombre:</strong> ${userData.name}</p>
+        <p><strong>Correo electrónico:</strong> ${userData.email}</p>
+        <p><strong>Mensaje:</strong> ${userData.message}</p>
+    `;
   }
 
   displayMessages();
